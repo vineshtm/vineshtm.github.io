@@ -1,685 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vinesh T M | Senior Unity Developer</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Vinesh T M - Senior Unity Developer specializing in games, mobile, multiplayer, AI and AR/VR/XR.">
+          content="Vinesh T M — Senior Software Engineer, Unity Developer, Mobile Architect and Technology Lead specializing in games, AI, mobile and XR.">
 
-    <style>
+    <title>Vinesh T M | Software Engineer · Unity · Games · AI · XR</title>
 
-        /* =========================================================
-           GLOBAL
-        ========================================================= */
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-        html {
-            scroll-behavior: smooth;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #050507;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    <!-- Shared Portfolio CSS -->
+    <link rel="stylesheet"
+          href="style.css">
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .container {
-            width: min(1200px, 90%);
-            margin: auto;
-        }
-
-
-        /* =========================================================
-           COLORS
-        ========================================================= */
-
-        :root {
-            --bg: #050507;
-            --bg-light: #0c0c12;
-            --card: #111119;
-            --blue: #4f8cff;
-            --purple: #9b5cff;
-            --cyan: #00e5ff;
-            --text: #ffffff;
-            --muted: #9c9ca8;
-            --border: rgba(255,255,255,0.08);
-        }
-
-
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            padding: 20px 0;
-
-            background: rgba(5,5,7,0.65);
-            backdrop-filter: blur(15px);
-
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .nav-inner {
-            width: min(1200px, 90%);
-            margin: auto;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-
-        .logo span {
-            color: var(--blue);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #aaa;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: white;
-        }
-
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-
-            position: relative;
-
-            background:
-                radial-gradient(circle at 80% 30%, rgba(79,140,255,0.20), transparent 30%),
-                radial-gradient(circle at 20% 70%, rgba(155,92,255,0.15), transparent 30%),
-                #050507;
-        }
-
-        .hero::before {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    rgba(5,5,7,0.3),
-                    rgba(5,5,7,0.9)
-                );
-
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 850px;
-        }
-
-        .eyebrow {
-            color: var(--cyan);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 13px;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(55px, 9vw, 120px);
-            line-height: 0.95;
-            letter-spacing: -5px;
-            margin-bottom: 30px;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(
-                90deg,
-                var(--blue),
-                var(--purple),
-                var(--cyan)
-            );
-
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-description {
-            max-width: 700px;
-            color: var(--muted);
-            font-size: 20px;
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-
-            padding: 14px 25px;
-
-            border-radius: 30px;
-
-            font-weight: 600;
-            font-size: 14px;
-
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: linear-gradient(
-                90deg,
-                var(--blue),
-                var(--purple)
-            );
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--border);
-            background: rgba(255,255,255,0.04);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-
-        /* =========================================================
-           SECTION
-        ========================================================= */
-
-        section {
-            padding: 120px 0;
-        }
-
-        .section-label {
-            color: var(--cyan);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-size: clamp(40px, 6vw, 70px);
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .section-description {
-            color: var(--muted);
-            max-width: 650px;
-            margin-bottom: 60px;
-        }
-
-
-        /* =========================================================
-           PROJECTS
-        ========================================================= */
-
-        .projects {
-            background: #08080d;
-        }
-
-        .project-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 25px;
-        }
-
-        .project {
-            position: relative;
-
-            background: var(--card);
-
-            border: 1px solid var(--border);
-
-            border-radius: 18px;
-
-            overflow: hidden;
-
-            transition: 0.4s;
-        }
-
-        .project:hover {
-            transform: translateY(-8px);
-
-            border-color:
-                rgba(79,140,255,0.5);
-
-            box-shadow:
-                0 20px 60px rgba(0,0,0,0.5);
-        }
-
-        .project-video {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #101018,
-                    #1a1a2b
-                );
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-video iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .project-content {
-            padding: 28px;
-        }
-
-        .project-number {
-            color: var(--blue);
-            font-size: 12px;
-            letter-spacing: 2px;
-        }
-
-        .project h3 {
-            font-size: 28px;
-            margin: 8px 0;
-        }
-
-        .project p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-        .tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            font-size: 11px;
-
-            padding: 6px 10px;
-
-            border-radius: 20px;
-
-            background:
-                rgba(79,140,255,0.1);
-
-            color: #8fb5ff;
-
-            border:
-                1px solid rgba(79,140,255,0.2);
-        }
-
-
-        /* =========================================================
-           CREATIVE DEVELOPMENT
-        ========================================================= */
-
-        .creative {
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(155,92,255,0.12),
-                    transparent 40%
-                );
-        }
-
-        .creative-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-        .creative-card {
-            padding: 35px;
-
-            background:
-                rgba(255,255,255,0.03);
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 16px;
-
-            transition: 0.3s;
-        }
-
-        .creative-card:hover {
-            transform: translateY(-5px);
-
-            background:
-                rgba(255,255,255,0.06);
-        }
-
-        .creative-icon {
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
-
-        .creative-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .creative-card p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-
-        /* =========================================================
-           ABOUT
-        ========================================================= */
-
-        .about {
-            background: #08080d;
-        }
-
-        .about-grid {
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 80px;
-
-            align-items: center;
-        }
-
-        .about-text {
-            color: var(--muted);
-            font-size: 17px;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-
-        /* =========================================================
-           SKILLS
-        ========================================================= */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            padding: 10px 15px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 30px;
-
-            background:
-                rgba(255,255,255,0.03);
-
-            font-size: 13px;
-
-            color: #ccc;
-        }
-
-
-        /* =========================================================
-           EXPERIENCE
-        ========================================================= */
-
-        .experience-item {
-            padding: 30px 0;
-
-            border-bottom:
-                1px solid var(--border);
-        }
-
-        .experience-item h3 {
-            font-size: 25px;
-        }
-
-        .experience-item span {
-            color: var(--blue);
-            font-size: 13px;
-        }
-
-        .experience-item p {
-            color: var(--muted);
-            margin-top: 10px;
-        }
-
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
-
-        .contact {
-            text-align: center;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(79,140,255,0.15),
-                    transparent 50%
-                );
-        }
-
-        .contact h2 {
-            font-size: clamp(45px, 7vw, 90px);
-            line-height: 1;
-            margin-bottom: 25px;
-        }
-
-        .contact p {
-            color: var(--muted);
-            margin-bottom: 35px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            padding: 30px;
-
-            text-align: center;
-
-            color: #666;
-
-            font-size: 12px;
-
-            border-top:
-                1px solid var(--border);
-        }
-
-
-        /* =========================================================
-           ANIMATION
-        ========================================================= */
-
-        @keyframes float {
-
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .hero-content {
-            animation:
-                fadeUp 1s ease forwards;
-        }
-
-        @keyframes fadeUp {
-
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
-
-        @media (max-width: 800px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                letter-spacing: -3px;
-            }
-
-            .hero-description {
-                font-size: 17px;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .creative-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            section {
-                padding: 80px 0;
-            }
-        }
-
-    </style>
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      NAVIGATION
-========================================================= -->
+===================================================== -->
 
-<nav>
+<header class="navbar">
 
-    <div class="nav-inner">
+    <div class="nav-container">
 
-        <div class="logo">
+        <a href="index.html"
+           class="logo">
             VINESH<span>.</span>
-        </div>
+        </a>
 
-        <ul class="nav-links">
 
-            <li>
-                <a href="#work">Work</a>
-            </li>
+        <nav>
 
-            <li>
-                <a href="#creative">Creative</a>
-            </li>
+            <ul class="nav-links">
 
-            <li>
-                <a href="#about">About</a>
-            </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+                <li>
+                    <a href="#expertise">Expertise</a>
+                </li>
 
-        </ul>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
 
     </div>
 
-</nav>
+</header>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
+
+<main>
 
 <section class="hero">
 
@@ -688,39 +95,57 @@
         <div class="hero-content">
 
             <div class="eyebrow">
-                Senior Unity Developer
+                Senior Engineer · Technology Lead · Builder
             </div>
 
+
             <h1>
-                VINESH<br>
-                <span>T M.</span>
+
+                Vinesh
+                <span class="gradient-text">
+                    T M.
+                </span>
+
             </h1>
+
+
+            <div class="hero-role">
+
+                Software Engineering
+                <span class="gradient-text">×</span>
+                Games
+                <span class="gradient-text">×</span>
+                AI
+                <span class="gradient-text">×</span>
+                XR
+
+            </div>
+
 
             <p class="hero-description">
 
-                9+ years creating games and interactive
-                experiences with Unity and C#.
+                Senior engineer with 9+ years of experience
+                building games, mobile applications,
+                multiplayer systems, AI-powered experiences
+                and immersive AR/VR/XR products.
 
-                Games · Mobile · Multiplayer · AI · AR/VR/XR
+                From rapid prototypes to production —
+                I turn ideas into working experiences.
 
             </p>
 
-            <div class="hero-buttons">
 
-                <a
-                    href="#work"
-                    class="btn btn-primary">
+            <div class="button-group">
 
+                <a href="#projects"
+                   class="btn btn-primary">
                     Explore My Work
-
                 </a>
 
-                <a
-                    href="#contact"
-                    class="btn btn-secondary">
 
-                    Contact Me
-
+                <a href="#contact"
+                   class="btn btn-secondary">
+                    Let's Connect
                 </a>
 
             </div>
@@ -732,536 +157,12 @@
 </section>
 
 
-<!-- =========================================================
-     SELECTED WORK
-========================================================= -->
 
-<section
-    id="work"
-    class="projects">
-
-    <div class="container">
-
-        <div class="section-label">
-            Selected Work
-        </div>
-
-        <h2 class="section-title">
-            GAMES
-        </h2>
-
-        <p class="section-description">
-
-            A selection of games and interactive
-            experiences I've developed using Unity,
-            C# and related technologies.
-
-        </p>
-
-
-        <div class="project-grid">
-
-
-            <!-- PROJECT 01 -->
-
-            <article class="project">
-
-                <div class="project-video">
-
-                    <!-- REPLACE VIDEO_ID WITH YOUR YOUTUBE VIDEO ID -->
-
-                    <iframe
-                        src="https://www.youtube.com/embed/YdUncMF1l7g"
-                        title="tTorque"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-number">
-                        01 / GAME
-                    </div>
-
-                    <h3>
-                        tTorque
-                    </h3>
-
-                    <p>
-                        Multiplayer racing game with
-                        AI opponents, gameplay systems,
-                        racing mechanics and leaderboards.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Unity
-                        </span>
-
-                        <span class="tag">
-                            C#
-                        </span>
-
-                        <span class="tag">
-                            Multiplayer
-                        </span>
-
-                        <span class="tag">
-                            AI
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 02 -->
-
-            <article class="project">
-
-                <div class="project-video">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/8qWvjTP-21s"
-                        title="Special Forces"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-number">
-                        02 / GAME
-                    </div>
-
-                    <h3>
-                        Special Forces
-                    </h3>
-
-                    <p>
-                        Multiplayer FPS project with
-                        gameplay systems, networking,
-                        combat mechanics and AI.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Unity
-                        </span>
-
-                        <span class="tag">
-                            FPS
-                        </span>
-
-                        <span class="tag">
-                            Multiplayer
-                        </span>
-
-                        <span class="tag">
-                            Photon
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 03 -->
-
-            <article class="project">
-
-                <div class="project-video">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/Nxcseq4vjLg"
-                        title="Vertical Infinity"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-number">
-                        03 / GAME
-                    </div>
-
-                    <h3>
-                        Vertical Infinity
-                    </h3>
-
-                    <p>
-                        Cross-platform Sci-Fi FPS
-                        with VR support and
-                        immersive gameplay.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Unity
-                        </span>
-
-                        <span class="tag">
-                            FPS
-                        </span>
-
-                        <span class="tag">
-                            VR
-                        </span>
-
-                        <span class="tag">
-                            C#
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 04 -->
-
-            <article class="project">
-
-                <div class="project-video">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/o2YaZEZoZ-Y"
-                        title="Third Eye Combat"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-number">
-                        04 / GAME
-                    </div>
-
-                    <h3>
-                        Third Eye Combat
-                    </h3>
-
-                    <p>
-                        AR FPS game combining
-                        mobile gameplay with
-                        augmented reality.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Unity
-                        </span>
-
-                        <span class="tag">
-                            AR
-                        </span>
-
-                        <span class="tag">
-                            Mobile
-                        </span>
-
-                        <span class="tag">
-                            FPS
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 05 -->
-
-            <article class="project">
-
-                <div class="project-video">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/8qWvjTP-21s"
-                        title="Combat City"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-number">
-                        05 / GAME
-                    </div>
-
-                    <h3>
-                        Combat City
-                    </h3>
-
-                    <p>
-                        Multiplayer FPS with
-                        AI opponents and
-                        combat gameplay systems.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Unity
-                        </span>
-
-                        <span class="tag">
-                            FPS
-                        </span>
-
-                        <span class="tag">
-                            AI
-                        </span>
-
-                        <span class="tag">
-                            Multiplayer
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 06 -->
-
-            <article class="project">
-
-                <div class="project-video">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/S6KToOFx0Uw"
-                        title="ViXR Creator"
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-number">
-                        06 / XR
-                    </div>
-
-                    <h3>
-                        ViXR Creator & Wonder
-                    </h3>
-
-                    <p>
-                        AR content creation and
-                        viewing platform for
-                        mobile and XR devices.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Unity
-                        </span>
-
-                        <span class="tag">
-                            AR
-                        </span>
-
-                        <span class="tag">
-                            VR
-                        </span>
-
-                        <span class="tag">
-                            VisionOS
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CREATIVE DEVELOPMENT
-========================================================= -->
-
-<section
-    id="creative"
-    class="creative">
-
-    <div class="container">
-
-        <div class="section-label">
-            Creative Development
-        </div>
-
-        <h2 class="section-title">
-            BUILD.<br>
-            TEST.<br>
-            ITERATE.
-        </h2>
-
-        <p class="section-description">
-
-            I enjoy rapidly turning creative concepts
-            into playable Unity prototypes and
-            experimenting with mechanics, visuals,
-            AI and player experiences.
-
-        </p>
-
-
-        <div class="creative-grid">
-
-
-            <div class="creative-card">
-
-                <div class="creative-icon">
-                    🎮
-                </div>
-
-                <h3>
-                    Gameplay Prototyping
-                </h3>
-
-                <p>
-                    Rapid implementation of gameplay
-                    mechanics, player controls,
-                    cameras, UI and game systems.
-                </p>
-
-            </div>
-
-
-            <div class="creative-card">
-
-                <div class="creative-icon">
-                    🧠
-                </div>
-
-                <h3>
-                    AI Gameplay
-                </h3>
-
-                <p>
-                    AI opponents, intelligent
-                    gameplay behaviours and
-                    AI-assisted development workflows.
-                </p>
-
-            </div>
-
-
-            <div class="creative-card">
-
-                <div class="creative-icon">
-                    ⚡
-                </div>
-
-                <h3>
-                    Rapid Iteration
-                </h3>
-
-                <p>
-                    Quickly experimenting with
-                    different mechanics, visuals,
-                    interactions and player experiences.
-                </p>
-
-            </div>
-
-
-            <div class="creative-card">
-
-                <div class="creative-icon">
-                    🛠️
-                </div>
-
-                <h3>
-                    Unity Tools
-                </h3>
-
-                <p>
-                    Editor extensions, internal
-                    tools and workflows designed
-                    to accelerate development.
-                </p>
-
-            </div>
-
-
-            <div class="creative-card">
-
-                <div class="creative-icon">
-                    📱
-                </div>
-
-                <h3>
-                    Mobile Games
-                </h3>
-
-                <p>
-                    Cross-platform mobile development
-                    with a focus on performance,
-                    usability and player experience.
-                </p>
-
-            </div>
-
-
-            <div class="creative-card">
-
-                <div class="creative-icon">
-                    🤖
-                </div>
-
-                <h3>
-                    AI-Assisted Development
-                </h3>
-
-                <p>
-                    Experience using modern AI tools
-                    such as Copilot, Cursor and
-                    Windsurf to accelerate workflows.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      ABOUT
-========================================================= -->
+===================================================== -->
 
-<section
-    id="about"
-    class="about">
+<section id="about">
 
     <div class="container">
 
@@ -1275,9 +176,9 @@
                 </div>
 
                 <h2 class="section-title">
-                    ENGINEER.<br>
-                    CREATOR.<br>
-                    GAMER.
+                    Building ideas<br>
+                    into <span class="gradient-text">
+                    experiences.</span>
                 </h2>
 
             </div>
@@ -1286,60 +187,56 @@
             <div class="about-text">
 
                 <p>
-                    I'm Vinesh T M, a Senior Unity Developer
-                    with 9+ years of experience building
-                    games and interactive applications.
+
+                    I'm a Senior Software Engineer and
+                    Technology Lead specializing in Unity,
+                    C#, mobile development, games and
+                    immersive technologies.
+
                 </p>
 
-                <p>
-                    My experience spans mobile games,
-                    multiplayer systems, AI gameplay,
-                    AR/VR/XR applications and
-                    performance optimization.
-                </p>
 
                 <p>
-                    I've worked across the complete
-                    development lifecycle — from
-                    rapid prototyping and gameplay
-                    implementation to optimization,
-                    deployment and live production.
+
+                    Over the years I've worked across the
+                    complete product lifecycle — from
+                    brainstorming and rapid prototyping
+                    to architecture, development,
+                    optimization and production release.
+
                 </p>
+
+
+                <p>
+
+                    My experience spans multiplayer games,
+                    AI systems, AR/VR/XR applications,
+                    mobile platforms and cross-functional
+                    engineering leadership.
+
+                </p>
+
+
+                <div class="button-group">
+
+                    <a href="unity/"
+                       class="btn btn-secondary">
+
+                        Unity & Games →
+
+                    </a>
+
+
+                    <a href="software/"
+                       class="btn btn-secondary">
+
+                        Software Engineering →
+
+                    </a>
+
+                </div>
 
             </div>
-
-        </div>
-
-
-        <br><br><br>
-
-
-        <div class="section-label">
-            Technologies
-        </div>
-
-
-        <div class="skills">
-
-            <span class="skill">Unity</span>
-            <span class="skill">C#</span>
-            <span class="skill">Mobile Games</span>
-            <span class="skill">Multiplayer</span>
-            <span class="skill">Photon</span>
-            <span class="skill">AI</span>
-            <span class="skill">OpenAI</span>
-            <span class="skill">ARKit</span>
-            <span class="skill">ARCore</span>
-            <span class="skill">ARFoundation</span>
-            <span class="skill">XR Toolkit</span>
-            <span class="skill">Meta Quest</span>
-            <span class="skill">VisionOS</span>
-            <span class="skill">Firebase</span>
-            <span class="skill">PlayFab</span>
-            <span class="skill">Git</span>
-            <span class="skill">Perforce</span>
-            <span class="skill">Unity Tools</span>
-            <span class="skill">Performance Optimization</span>
 
         </div>
 
@@ -1348,11 +245,544 @@
 </section>
 
 
-<!-- =========================================================
-     EXPERIENCE
-========================================================= -->
+
+<!-- =====================================================
+     EXPERTISE
+===================================================== -->
+
+<section id="expertise">
+
+    <div class="container">
+
+        <div class="section-label">
+            What I Do
+        </div>
+
+
+        <h2 class="section-title">
+            Areas of <span class="gradient-text">
+            expertise.</span>
+        </h2>
+
+
+        <p class="section-description">
+
+            A combination of engineering depth,
+            product thinking and hands-on development.
+
+        </p>
+
+
+        <div class="card-grid">
+
+
+            <!-- UNITY -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    Unity & Game Development
+                </h3>
+
+                <p>
+
+                    Unity, C#, gameplay systems,
+                    multiplayer, AI opponents,
+                    UI, optimization and mobile games.
+
+                </p>
+
+                <br>
+
+                <a href="unity/"
+                   class="btn btn-secondary">
+
+                    View Unity Portfolio →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SOFTWARE -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Software Engineering
+                </h3>
+
+                <p>
+
+                    Software architecture,
+                    technical leadership,
+                    APIs, backend integrations,
+                    system design and engineering practices.
+
+                </p>
+
+                <br>
+
+                <a href="software/"
+                   class="btn btn-secondary">
+
+                    View Software Portfolio →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MOBILE -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Mobile Engineering
+                </h3>
+
+                <p>
+
+                    Android, iOS, React Native
+                    and cross-platform applications
+                    from prototype to production.
+
+                </p>
+
+                <br>
+
+                <a href="mobile/"
+                   class="btn btn-secondary">
+
+                    View Mobile Portfolio →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- XR -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🥽
+                </div>
+
+                <h3>
+                    AR / VR / XR
+                </h3>
+
+                <p>
+
+                    Immersive experiences using Unity,
+                    ARFoundation, ARKit, ARCore,
+                    Meta Quest and VisionOS.
+
+                </p>
+
+                <br>
+
+                <a href="xr/"
+                   class="btn btn-secondary">
+
+                    View XR Portfolio →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- AI -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI & Intelligent Systems
+                </h3>
+
+                <p>
+
+                    AI integrations, intelligent game
+                    systems, AI opponents and
+                    AI-assisted development workflows.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- LEADERSHIP -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Technical Leadership
+                </h3>
+
+                <p>
+
+                    Architecture, mentoring,
+                    team leadership, delivery planning,
+                    code reviews and stakeholder collaboration.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
 
 <section>
+
+    <div class="container">
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    9+
+                </div>
+
+                <div class="stat-label">
+                    Years Engineering Experience
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    20+
+                </div>
+
+                <div class="stat-label">
+                    Mobile Apps & Games
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    10+
+                </div>
+
+                <div class="stat-label">
+                    Games & Interactive Experiences
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    6+
+                </div>
+
+                <div class="stat-label">
+                    Platforms & Ecosystems
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-label">
+            Selected Work
+        </div>
+
+
+        <h2 class="section-title">
+
+            Projects that
+            <span class="gradient-text">
+                shipped.</span>
+
+        </h2>
+
+
+        <p class="section-description">
+
+            A selection of games, immersive applications
+            and technology products I've helped build.
+
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
+                <div class="project-media">
+
+                    <!-- Replace XYZ with your YouTube video ID -->
+
+                    <iframe
+                        src="https://www.youtube.com/embed/YdUncMF1l7g"
+                        title="tTorque Multiplayer Racing Game"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        01 · GAME
+                    </div>
+
+                    <h3 class="project-title">
+                        tTorque
+                    </h3>
+
+                    <p class="project-description">
+
+                        Multiplayer racing game built with
+                        Unity featuring AI opponents,
+                        multiplayer gameplay and
+                        competitive systems.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Multiplayer</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Mobile</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <div class="project-media">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/8qWvjTP-21s"
+                        title="Special Forces FPS"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        02 · GAME
+                    </div>
+
+                    <h3 class="project-title">
+                        Special Forces
+                    </h3>
+
+                    <p class="project-description">
+
+                        FPS game featuring multiplayer
+                        gameplay, combat systems,
+                        AI and real-time interaction.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">FPS</span>
+                        <span class="tag">Multiplayer</span>
+                        <span class="tag">AI</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card">
+
+                <div class="project-media">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/Nxcseq4vjLg"
+                        title="Vertical Infinity"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        03 · GAME
+                    </div>
+
+                    <h3 class="project-title">
+                        Vertical Infinity
+                    </h3>
+
+                    <p class="project-description">
+
+                        Cross-platform sci-fi FPS
+                        developed with Unity,
+                        including VR support.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">FPS</span>
+                        <span class="tag">VR</span>
+                        <span class="tag">Cross-platform</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card">
+
+                <div class="project-media">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/S6KToOFx0Uw"
+                        title="ViXR Creator & Wonder"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        04 · XR
+                    </div>
+
+                    <h3 class="project-title">
+                        ViXR Creator & Wonder
+                    </h3>
+
+                    <p class="project-description">
+
+                        AR content creation and viewing
+                        platform supporting mobile,
+                        Oculus Quest and VisionOS.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">Unity</span>
+                        <span class="tag">AR</span>
+                        <span class="tag">VisionOS</span>
+                        <span class="tag">Oculus</span>
+                        <span class="tag">iOS</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience">
 
     <div class="container">
 
@@ -1360,74 +790,118 @@
             Experience
         </div>
 
+
         <h2 class="section-title">
-            CAREER
+
+            A decade of
+            <span class="gradient-text">
+                building.</span>
+
         </h2>
 
 
         <div class="experience-item">
 
-            <span>
+            <div class="experience-date">
                 2021 — 2025
-            </span>
+            </div>
 
             <h3>
                 Senior Engineering Lead
             </h3>
 
+            <div class="experience-company">
+                ViXR Inc. / Triumb Technologies
+            </div>
+
             <p>
-                ViXR Inc. / Triumb Technologies Pvt. Ltd.
+
+                Led Unity, mobile, backend and
+                AR/VR engineering initiatives while
+                remaining hands-on across games,
+                immersive platforms, AI integrations
+                and production systems.
+
             </p>
 
         </div>
 
 
+
         <div class="experience-item">
 
-            <span>
+            <div class="experience-date">
                 2017 — 2021
-            </span>
+            </div>
 
             <h3>
                 Lead Engineer
             </h3>
 
+            <div class="experience-company">
+                ViXR Inc. / Triumb Technologies
+            </div>
+
             <p>
-                ViXR Inc. / Triumb Technologies Pvt. Ltd.
+
+                Designed and developed Unity games,
+                multiplayer systems, AR/VR applications,
+                gameplay systems and cross-platform
+                experiences.
+
             </p>
 
         </div>
 
 
+
         <div class="experience-item">
 
-            <span>
+            <div class="experience-date">
                 2014 — 2017
-            </span>
+            </div>
 
             <h3>
                 Senior Engineer
             </h3>
 
+            <div class="experience-company">
+                ViXR Inc. / Triumb Technologies
+            </div>
+
             <p>
-                ViXR Inc. / Triumb Technologies Pvt. Ltd.
+
+                Worked across Unity, mobile,
+                games and interactive application
+                development.
+
             </p>
 
         </div>
 
 
+
         <div class="experience-item">
 
-            <span>
+            <div class="experience-date">
                 2011 — 2014
-            </span>
+            </div>
 
             <h3>
-                Mobile Developer
+                Mobile & Game Developer
             </h3>
 
-            <p>
+            <div class="experience-company">
                 Mango Technologies Pvt. Ltd.
+            </div>
+
+            <p>
+
+                Developed 20+ mobile applications
+                and games across Android, iOS,
+                Windows, Blackberry, J2ME and
+                other mobile platforms.
+
             </p>
 
         </div>
@@ -1437,13 +911,79 @@
 </section>
 
 
-<!-- =========================================================
-     CONTACT
-========================================================= -->
 
-<section
-    id="contact"
-    class="contact">
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            Technology
+        </div>
+
+
+        <h2 class="section-title">
+
+            Tools I
+            <span class="gradient-text">
+                build with.</span>
+
+        </h2>
+
+
+        <div class="skills">
+
+            <span class="skill">Unity</span>
+            <span class="skill">C#</span>
+            <span class="skill">C++</span>
+            <span class="skill">C</span>
+
+            <span class="skill">Mobile Games</span>
+            <span class="skill">Multiplayer</span>
+            <span class="skill">Photon PUN</span>
+
+            <span class="skill">Android</span>
+            <span class="skill">iOS</span>
+            <span class="skill">React Native</span>
+
+            <span class="skill">ARFoundation</span>
+            <span class="skill">ARKit</span>
+            <span class="skill">ARCore</span>
+
+            <span class="skill">Meta Quest</span>
+            <span class="skill">VisionOS</span>
+            <span class="skill">VR</span>
+
+            <span class="skill">Firebase</span>
+            <span class="skill">PlayFab</span>
+            <span class="skill">MongoDB</span>
+
+            <span class="skill">OpenAI</span>
+            <span class="skill">Claude</span>
+            <span class="skill">Copilot</span>
+            <span class="skill">Cursor</span>
+
+            <span class="skill">Git</span>
+            <span class="skill">Perforce</span>
+            <span class="skill">SVN</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact"
+         class="contact">
 
     <div class="container">
 
@@ -1451,46 +991,56 @@
             Get In Touch
         </div>
 
-        <h2>
-            LET'S BUILD<br>
-            SOMETHING.
+
+        <h2 class="contact-title">
+
+            Let's build
+            <span class="gradient-text">
+                something.</span>
+
         </h2>
 
-        <p>
-            Interested in games, creative development,
-            Unity or interactive experiences?
+
+        <p class="contact-description">
+
+            Open to interesting opportunities across
+            Unity, games, software engineering,
+            mobile, AI and XR.
+
         </p>
 
 
-        <div class="social-links">
+        <div class="button-group"
+             style="justify-content:center;">
 
-            <a
-                href="https://www.linkedin.com/in/vineshtm"
-                class="btn btn-primary"
-                target="_blank">
+
+            <a href="https://www.linkedin.com/in/vineshtm/"
+               target="_blank"
+               class="btn btn-primary">
 
                 LinkedIn
 
             </a>
 
 
-            <a
-                href="https://github.com/vineshtm"
-                class="btn btn-secondary"
-                target="_blank">
+
+            <a href="https://vineshtm.github.io/"
+               target="_blank"
+               class="btn btn-secondary">
 
                 GitHub
 
             </a>
 
 
-            <a
-                href="mailto:tmvinesh.007.mobile@gmail.com"
-                class="btn btn-secondary">
 
-                Email
+            <a href="mailto:tmvinesh.007.mobile@gmail.com"
+               class="btn btn-secondary">
+
+                Email Me
 
             </a>
+
 
         </div>
 
@@ -1499,16 +1049,26 @@
 </section>
 
 
-<!-- =========================================================
+</main>
+
+
+
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
-    © 2026 Vinesh T M · Senior Unity Developer
+    <div class="container">
+
+        © 2026 Vinesh T M ·
+        Software Engineer · Unity · Games · AI · XR
+
+    </div>
 
 </footer>
 
 
 </body>
+
 </html>
