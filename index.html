@@ -34,6 +34,8 @@
 
           <a href="#experience"> Experience </a>
 
+          <a href="#gallery"> Gallery </a>
+
           <a href="#contact"> Contact </a>
         </nav>
       </div>
@@ -620,6 +622,137 @@
       </section>
 
       <!-- =====================================================
+     GALLERY
+     ===================================================== -->
+
+      <section id="gallery">
+        <div class="container">
+          <div class="section-label">Gallery</div>
+          <!-- <h2>My Videos</h2> -->
+
+          <div class="video-carousel">
+            <button
+              class="video-arrow left"
+              id="leftBtn"
+              aria-label="Previous videos"
+            >
+              &#10094;
+            </button>
+
+            <!-- Videos -->
+            <div class="video-scroll" id="videoScroll">
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/zO814OP70zM"
+                  title="YouTube Video 1"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/r3RolnNRKrE"
+                  title="YouTube Video 2"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/KGQhIIZX3Vk"
+                  title="YouTube Video 3"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/9hGAuL_aKbc"
+                  title="YouTube Video 4"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/zO814OP70zM"
+                  title="YouTube Video 5"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/2SIG7TTAfSw"
+                  title="YouTube Video 6"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/Xgjv-v4Feh8"
+                  title="YouTube Video 7"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/SVMxoQX-Td0"
+                  title="YouTube Video 8"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/SN2EtqMJpIg"
+                  title="YouTube Video 9"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/fgXF5oMSzUs"
+                  title="YouTube Video 10"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/cZ8m9V8pgcQ"
+                  title="YouTube Video 11"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <button
+              class="video-arrow right"
+              id="rightBtn"
+              aria-label="Next videos"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
      CONTACT
      ===================================================== -->
 
@@ -703,5 +836,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <script src="js/video-carousel.js"></script>
   </body>
 </html>

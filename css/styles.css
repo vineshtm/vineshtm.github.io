@@ -1110,6 +1110,116 @@ section {
 }
 
 /* =========================================================
+   GALLERY
+========================================================= */
+.videos-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.video-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Horizontal video container */
+.video-scroll {
+  display: flex;
+  gap: 20px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  padding: 10px 5px;
+}
+
+.video-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual video */
+.video-card {
+  flex: 0 0 360px;
+
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+/* Arrow buttons */
+.video-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+
+.video-arrow:hover {
+  background: #000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.video-arrow.left {
+  left: -20px;
+}
+
+.video-arrow.right {
+  right: -20px;
+}
+
+.video-arrow.hidden {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .video-card {
+    flex: 0 0 85vw;
+  }
+
+  .video-arrow.left {
+    left: 5px;
+  }
+
+  .video-arrow.right {
+    right: 5px;
+  }
+}
+
+/* =========================================================
    ANIMATIONS
 ========================================================= */
 
